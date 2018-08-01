@@ -26,6 +26,26 @@
 *:-ms-input-placeholder
 	color: #666
 	opacity: 1
+@-webkit-keyframes animate_bg 
+  from 
+    background-position: 0 0; 
+  to 
+    background-position: -1920px 0; 
+@-moz-keyframes animate_bg 
+  from 
+    background-position: 0 0; 
+  to 
+    background-position: -1920px 0; 
+@-o-keyframes animate_bg 
+  from 
+    background-position: 0 0; 
+  to 
+    background-position: -1920px 0; 
+@keyframes animate_bg 
+  from 
+    background-position: 0 0; 
+  to
+    background-position: -1920px 0; 
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -44,6 +64,52 @@ body
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
+
+.wrapper 
+    background: url(../img/bg.jpg) 0 0 repeat
+    background-size: cover;
+    -webkit-animation: animate_bg 60s linear 0s infinite
+    -moz-animation: animate_bg 60s linear 0s infinite
+    -o-animation: animate_bg 60s linear 0s infinite
+    animation: animate_bg 60s linear 0s infinite
+.bg 
+	position: absolute
+	img
+		width: 100%
+		height: auto
+.container
+	display: flex
+	height: 100vh
+	margin: auto
+.popup-container
+	position: relative
+	width: 100%
+	margin: auto
+.popup-bg
+	width: 600px
+	margin: auto
+.panda-container
+	top: 281px
+	right: 104px
+.button-container
+	width: 400px
+	position: absolute
+	top: 150px
+	right: 100px
+li
+	display: list-item
+	list-style-type: none
+	.btn
+		width: 100px
+		height: 100px
+.btn-play
+	right: -120px
+.btn-user
+	right: -120px	
+	top: 35px
+.btn-settings
+	right: -120px
+	top: 145px
 
 .img-responsive
 	display: block
