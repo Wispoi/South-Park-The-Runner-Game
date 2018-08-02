@@ -1,0 +1,413 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+@-webkit-keyframes animate_bg 
+  from 
+    background-position: 0 0
+  to 
+    background-position: -1920px 0
+@-moz-keyframes animate_bg 
+  from 
+    background-position: 0 0
+  to 
+    background-position: -1920px 0
+@-o-keyframes animate_bg 
+  from 
+    background-position: 0 0
+  to 
+    background-position: -1920px 0
+@keyframes animate_bg 
+  from 
+    background-position: 0 0
+  to
+    background-position: -1920px 0
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+section, header
+	position: relative
+	background-size: cover
+	background-position: center
+	background-color: #fff
+
+h1, h2, h3, h4, h5, h6 
+    font-family: 'raleway', sans-serif; 
+    font-weight: 500
+    font-size: 16px
+.container 
+	margin-right: auto
+	margin-left: auto
+	padding-left: 15px
+	padding-right: 15px
+
+.row 
+	margin-left: -15px
+	margin-right: -15px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+.navbar
+	position: fixed
+	overflow: l
+	z-index: 100
+	height: 35px
+	width: 100%
+	top: 0
+	background-color: $lightgrey
+	img
+		height: 30px
+		padding-top: 4px
+
+.main-header
+	min-height: 320px
+	background: url(../img/bg.jpg) 0 0 repeat-x
+	background-size: 100%
+	-webkit-animation: animate_bg 80s linear 0s infinite
+	-moz-animation: animate_bg 80s linear 0s infinite
+	-o-animation: animate_bg 80s linear 0s infinite
+	animation: animate_bg 80s linear 0s infinite
+	background-position: center
+	position: relative	
+	overflow: hidden
+	padding-bottom: 74px
+    
+.top-mnu	
+	ul
+		list-style-type: none
+		padding: 0 
+		margin: 0 0 0 4%
+		li
+			display: inline-block
+			position: relative
+			a
+				position: relative
+				display: block
+				padding: 0 5px 0 5px
+				font-family: 	'SouthPark'
+				font-size: 13px
+				text-transform: uppercase
+				color: #fff
+				padding-top: 9px
+				padding-left: 20px
+				border-left: 1px solid transparent
+				border-right: 1px solid transparent
+				background: transparent
+				transition: color .25s ease, background-color .25s ease
+				&:hover
+					text-decoration: none
+					color: $accent
+		
+.header-flex
+	display: flex
+	height: 100%
+	position: relative
+	top: 0
+
+.flex-center
+	margin: auto
+	margin-top: 120px	
+
+.header-composition
+	text-align: left
+	position: relative
+	padding-left: 40px	
+	p
+		margin-top: 40px
+	.button
+		margin-top: 25px
+	h1 
+	  margin-top: 110px
+	  color: #fff
+	  border-bottom: $accent 4px solid
+	  display: inline-block
+	  padding-bottom: 8px	
+	  font-size: 40px
+	h2
+		color: #fff
+		font-size: 30px
+		line-height: 1.3
+		margin-top: -10px
+
+.wrapper 
+	position: absolute
+	padding-bottom: 50px
+	padding-top: 50px
+.bg
+	img
+		width: 100%
+		height: auto
+
+
+
+.phone_container
+	padding: 0 0 35px 0	
+	color: #97a4b2
+	font-size: .875em
+	margin-right: 40px	
+	margin-left: 40px	
+.popup-container
+	position: relative
+	width: 95%
+	margin: auto
+
+.popup-bg
+	width: 20%
+	margin-left: 69%
+	margin-top: 0
+
+.l-phone__button
+	position: absolute
+	background-color: #423940
+	width: 3%
+	height: 3%	
+	padding-top: 3%
+	right: 19.2%
+	top: 94%
+	border-radius: 100%
+	transform: translateY(-50%)
+	img
+		height: auto	
+		display: none	
+.l-phone__square
+	position: absolute
+	background-color: #423940
+	transform: translate(-50%,-50%);
+	content: '';
+	width: 1.3%
+	height: 1.3%	
+	padding-top: 1.3%
+	right: 19.4%
+	top: 94%
+	border-radius: 10%;
+	box-shadow: 0 0 0 0.1rem #7a6f78;
+	img
+		display: none
+	&:hover
+  	background-color: #4c4c4c	
+  	color: #fff
+  	cursor: pointer
+.arrow 
+	position: absolute
+	margin-left: 63%
+	margin-top: 3%
+	top: 69%
+	img
+		width: 40%
+.press	
+	position: absolute
+	margin-left: 43%
+	margin-top: 3%
+	top: 58%
+	img
+		width: 40%
+
+.arrow-wrap 
+    position: relative
+    z-index: 3
+    top: -50px
+    text-align: center
+		
+.arrow-bottom 
+	display: inline-block
+	cursor: pointer
+	transition: all .25s ease
+	img
+		width: 60%
+
+.c-separator
+  position: absolute
+  left: 0
+  width: 100%
+  height: 18px
+  background-position: 50% 100%
+  background-size: auto 100%
+  background-repeat: repeat-x
+  background-color: transparent
+  z-index: 2
+  top: -18px
+
+.game-info
+	width: 100%
+	left: 0
+	background-size: cover
+	background-position: center
+	padding-top: 10px
+	position: absolute
+
+.c-bg-asset--background 
+  top: 5%
+  left: 0
+  height: 95%
+  background-size: cover
+  background-position: 50% 0
+
+.b-footer 
+  background-size: cover
+  position: relative
+  padding-bottom: 4rem
+  background-image: url(../../img/footer-bg.jpg)
+  background-position: 50% 0
+  background-color: #353535
+  color: #fff
+
+.b-footer__content 
+  width: 100%
+  position: relative
+  min-height: 1px
+  padding-left: 15px
+  padding-right: 15px
+  text-align: center
+  margin-top: 3rem
+.b-footer__appicon 
+  display: block
+  width: 50%
+  max-width: 190px
+.b-card-carousel__container, .b-faq__container, .b-footer__container
+  margin-left: auto
+  margin-right: auto
+  width: 90%
+  max-width: 1170px
+  margin-top: -50px
+.b-footer__row
+  margin-left: -15px
+  margin-right: -15px
+.b-footer__appicon, .b-footer__companies, .b-footer__download 
+	margin-left: auto
+	margin-right: auto
+
+.b-footer__logo
+	img
+		width: 50%
+		min-width: 260px
+		height: auto
+.b-footer__logo, .b-footer__social 
+  position: relative
+  float: left
+  width: 50%
+  min-height: 1px
+  padding-left: 15px
+  padding-right: 15px
+
+.b-footer__social 
+	text-align: right
+.c-social-list--large
+  height: 32px
+.fa 
+  display: inline-block
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+.c-social-list 
+  white-space: nowrap
+  list-style-type: none
+  padding: 0
+  margin: 0
+  height: 26px
+  cursor: pointer
+  li
+  	display: inline
+  	cursor: pointer
+.c-social-list--large li a 
+  font-size: 3.2rem
+  margin: 0 7px
+  color: #fff
+  cursor: pointer
+
+
+.b-footer__download 
+  display: block
+  margin-top: 3rem
+  width: 80%
+  max-width: 550px
+  margin-left: auto
+  margin-right: auto
+.c-download-badges__item 
+  position: relative
+  float: left
+  width: 50%
+  min-height: 1px    
+.c-download-badges::after
+  clear: both
+  content: ""
+  display: table
+
+.b-footer__companies 
+  width: 100%
+  max-width: 700px
+  margin-top: 6rem
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-align: center
+  align-items: center    
+  -ms-flex-pack: justify
+  justify-content: space-between
+.h-fullscreen, .h-wysiwyg-html 
+  position: relative
+  text-align: center
+  padding-top: 10px
+
+
+
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+@import "media" // Всегда в конце
