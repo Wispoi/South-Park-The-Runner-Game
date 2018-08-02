@@ -26,6 +26,7 @@
 *:-ms-input-placeholder
 	color: #666
 	opacity: 1
+
 @-webkit-keyframes animate_bg 
   from 
     background-position: 0 0
@@ -175,18 +176,19 @@ h1, h2, h3, h4, h5, h6
 	position: absolute
 	padding-bottom: 50px
 	padding-top: 50px
-.bg 
+.bg
 	img
 		width: 100%
 		height: auto
 
 
+
 .phone_container
-	padding: 0	
-  color: #97a4b2
-  font-size: .875em
-  margin-right: 40px	
-  margin-left: 40px	
+	padding: 0 0 35px 0	
+	color: #97a4b2
+	font-size: .875em
+	margin-right: 40px	
+	margin-left: 40px	
 .popup-container
 	position: relative
 	width: 95%
@@ -245,8 +247,8 @@ h1, h2, h3, h4, h5, h6
 
 .arrow-wrap 
     position: relative
-    z-index: 2
-    top: 70px
+    z-index: 3
+    top: -50px
     text-align: center
 		
 .arrow-bottom 
@@ -260,21 +262,139 @@ h1, h2, h3, h4, h5, h6
   position: absolute
   left: 0
   width: 100%
-  height: 92px
-  background-position: center
+  height: 18px
+  background-position: 50% 100%
   background-size: auto 100%
-  background-repeat: no-repeat
+  background-repeat: repeat-x
   background-color: transparent
-  z-index: 3
-  top: 0
+  z-index: 2
+  top: -18px
 
 .game-info
-	height: 100%
+	width: 100%
+	left: 0
 	background-size: cover
 	background-position: center
 	padding-top: 10px
-	position: relative	
-	overflow: hidden
+	position: absolute
+
+.c-bg-asset--background 
+  top: 5%
+  left: 0
+  height: 95%
+  background-size: cover
+  background-position: 50% 0
+
+.b-footer 
+  background-size: cover
+  position: relative
+  padding-bottom: 4rem
+  background-image: url(../../img/footer-bg.jpg)
+  background-position: 50% 0
+  background-color: #353535
+  color: #fff
+
+.b-footer__content 
+  width: 100%
+  position: relative
+  min-height: 1px
+  padding-left: 15px
+  padding-right: 15px
+  text-align: center
+  margin-top: 3rem
+.b-footer__appicon 
+  display: block
+  width: 50%
+  max-width: 190px
+.b-card-carousel__container, .b-faq__container, .b-footer__container
+  margin-left: auto
+  margin-right: auto
+  width: 90%
+  max-width: 1170px
+  margin-top: -50px
+.b-footer__row
+  margin-left: -15px
+  margin-right: -15px
+.b-footer__appicon, .b-footer__companies, .b-footer__download 
+	margin-left: auto
+	margin-right: auto
+
+.b-footer__logo
+	img
+		width: 50%
+		min-width: 260px
+		height: auto
+.b-footer__logo, .b-footer__social 
+  position: relative
+  float: left
+  width: 50%
+  min-height: 1px
+  padding-left: 15px
+  padding-right: 15px
+
+.b-footer__social 
+	text-align: right
+.c-social-list--large
+  height: 32px
+.fa 
+  display: inline-block
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+.c-social-list 
+  white-space: nowrap
+  list-style-type: none
+  padding: 0
+  margin: 0
+  height: 26px
+  li
+  	display: inline
+.c-social-list--large li a 
+  font-size: 3.2rem
+  margin: 0 7px
+  color: #fff
+  cursor: pointer
+
+
+.b-footer__download 
+  display: block
+  margin-top: 3rem
+  width: 80%
+  max-width: 550px
+  margin-left: auto
+  margin-right: auto
+.c-download-badges__item 
+  position: relative
+  float: left
+  width: 50%
+  min-height: 1px    
+.c-download-badges::after
+  clear: both
+  content: ""
+  display: table
+
+.b-footer__companies 
+  width: 100%
+  max-width: 700px
+  margin-top: 6rem
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-align: center
+  align-items: center    
+  -ms-flex-pack: justify
+  justify-content: space-between
+.h-fullscreen, .h-wysiwyg-html 
+  position: relative
+  text-align: center
+  padding-top: 10px
+
+
+
+
 
 .img-responsive
 	display: block
