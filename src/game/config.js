@@ -2,8 +2,8 @@ game.config = {
     name: 'South Park: The Runner Game',
 
     system: {
-        width: 768,
-        height: 1024,
+        width: 1366,
+        height: 631,
         startScene: 'Title',
         scale: true,
         center: true,
