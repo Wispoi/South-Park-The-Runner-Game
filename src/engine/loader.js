@@ -422,7 +422,7 @@ game.addAttributes('Loader', {
     **/
     backgroundColor: '#000',
     /**
-        @attribute {String} errorColor
+        @attribute {String} errorColor  
         @default #ff0000
     **/
     errorColor: '#ff0000',
@@ -454,7 +454,7 @@ game.addAttributes('Loader', {
         @attribute {Boolean} showLogo
         @default true
     **/
-    showLogo: true,
+    showLogo: false,
     /**
         @attribute {Boolean} showPercent
         @default true
@@ -465,7 +465,7 @@ game.addAttributes('Loader', {
         @attribute {String} text
         @default Made by Wispoi - www.wispoi.org
     **/
-    text: 'Made by Wispoi - www.wispoi.org',
+    text: 'Made by Wispoi - wispoi.github.io',
     /**
         @attribute {String} textColor
         @default #fff
