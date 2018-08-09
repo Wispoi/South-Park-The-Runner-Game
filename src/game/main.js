@@ -117,8 +117,8 @@ game.createScene('Title', {
         this.startText.anchorCenter();    
         this.startText.center(this.stage);
         this.startText.addTo(this.stage);
-        this.startText.position.x = game.width /2;
-        this.startText.position.y = 60;
+        this.startText.position.x = game.width /1.3;
+        this.startText.position.y = 700;
         this.startText.scale.x = 0;
         this.startText.scale.y = 0;
 
@@ -172,16 +172,16 @@ game.createScene('Death', {
             game.system.setScene('Main');
         });
         
-        button.sprite.position.x = 180 + game.width /2;
-        button.sprite.position.y = 922;
+        button.sprite.position.x = 90 + game.width /2;
+        button.sprite.position.y = 660;
         button.sprite.addTo(this.stage);
 
         var buttonexit = new game.Button('button2.png', function() {
             game.system.setScene('Title');
         });
         
-        buttonexit.sprite.position.x = - 180 + game.width /2;
-        buttonexit.sprite.position.y = 922;
+        buttonexit.sprite.position.x = - 90 + game.width /2;
+        buttonexit.sprite.position.y = 660;
         buttonexit.sprite.addTo(this.stage);    
 
         this.scoreText = new game.Text('Score: 0');
@@ -189,7 +189,7 @@ game.createScene('Death', {
         this.scoreText.center(this.stage);
         this.scoreText.addTo(this.stage);
         this.scoreText.position.x = game.width /2;
-        this.scoreText.position.y = 822;
+        this.scoreText.position.y = 560;
 
         this.deathSound = new game.Sound('Wasted.m4a');
         this.deathSound.loop = false;
@@ -248,7 +248,7 @@ game.createClass('Player', {
 
         this.particles = new game.Particles('particle.png');
         this.particles.position.x = 300;
-        this.particles.position.y = 950;
+        this.particles.position.y = 670;
         this.particles.speed = 500;
         this.particles.angle = Math.PI;
         this.particles.angleVar = 0.2;
@@ -323,6 +323,7 @@ game.createClass('Obstacle', {
         this.sprite.addTo(game.scene.obstacleLayer);
         this.sprite.anchorCenter();
 
+
         this.body = new game.Body();
         var shape = new game.Rectangle();
         shape.width = this.sprite.width - 100;
@@ -352,6 +353,7 @@ game.createClass('Obstacle', {
     }
 
 });
+
 
 game.createClass('Bonus', {
     init: function() {
@@ -386,6 +388,8 @@ game.createClass('Bonus', {
         if (this.sprite.position.x + this.sprite.width / 2 < 0) this.remove();
     }
 
+
+    
 });
 
 window.onbeforeunload = function (evt) {
