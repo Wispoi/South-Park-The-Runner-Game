@@ -277,13 +277,13 @@ game.createClass('Player', {
             this.body.velocity.y = -600;
             this.body.mass = 1;
             this.sprite.stop();
-
+            navigator.vibrate(500);
             game.Timer.add(2000, function() {
                 game.system.setScene('Death');
             });
 
             this.dead = true;
-            navigator.vibrate(500);
+
             this.runSound.stop();
 
             this.particles.active = false;
@@ -293,6 +293,7 @@ game.createClass('Player', {
 
             this.give = true;
             game.scene.addBonus();
+            navigator.vibrate(100);            
         }
     },
 
@@ -373,7 +374,7 @@ game.createClass('Bonus', {
         this.body.collisionGroup = 3;
         this.body.addShape(shape);
         this.body.addTo(game.scene.world);
-        navigator.vibrate(500);
+
     },
 
     remove: function () {
