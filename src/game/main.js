@@ -283,6 +283,7 @@ game.createClass('Player', {
             });
 
             this.dead = true;
+            navigator.vibrate(500);
             this.runSound.stop();
 
             this.particles.active = false;
@@ -372,7 +373,7 @@ game.createClass('Bonus', {
         this.body.collisionGroup = 3;
         this.body.addShape(shape);
         this.body.addTo(game.scene.world);
-
+        navigator.vibrate(500);
     },
 
     remove: function () {
