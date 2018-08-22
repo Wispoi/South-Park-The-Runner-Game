@@ -23,7 +23,8 @@ game.addAsset('soundbutton.png');
 game.addAsset('taco.m4a');
 
 game.createScene('Main', {
-    score: 0,   
+    score: 0,
+    highScore: 0,   
 
     init: function() {
         this.world = new game.Physics();
@@ -66,8 +67,16 @@ game.createScene('Main', {
         this.scoreText.anchorCenter();    
         this.scoreText.center(this.stage);
         this.scoreText.addTo(this.stage);
-        this.scoreText.position.x = game.width /2;
+        this.scoreText.position.x = game.width /3 - 300;
         this.scoreText.position.y = 50;
+
+        this.highScoreText = new game.Text('High Score: 0');
+        this.highScoreText.anchorCenter();    
+        this.highScoreText.center(this.stage);
+        this.highScoreText.addTo(this.stage);
+        this.highScoreText.position.x = game.width /3 + 700;
+        this.highScoreText.position.y = 50;
+
 
         this.mainSound = new game.Sound('main.wav');
         this.mainSound.loop = true;
@@ -77,6 +86,11 @@ game.createScene('Main', {
     addScore: function() {
         this.score += 100;
         this.scoreText.setText('Score: ' + this.score);
+            },
+
+    highScore: function() {
+        if (score > highScore)
+        this.highScore = this.score;
     },
 
     addBonus: function() {
@@ -130,26 +144,10 @@ game.createScene('Title', {
         tween.easing('Sinusoidal.Out');
         tween.start(); 
 
-    /*  var button = new game.Button('button.png', function() {
-            game.system.setScene('Main');
-        });
-
-        button.sprite.position.x = game.width /3.80;
-        button.sprite.position.y = 922;
-        button.sprite.addTo(this.stage);*/
-        
         this.titleSound = new game.Sound('Title1.m4a');
         this.titleSound.loop = true;
         this.titleSound.play(); 
-        
 
-     /*   var soundButton = new game.Button('soundbutton.png', function() {
-            this.titleSound.play();
-        }); 
-        
-        soundButton.sprite.position.x = 450 + game.width /3.80;
-        soundButton.sprite.position.y = 50;
-        soundButton.sprite.addTo(this.stage); */
     },
 
     mousedown: function () {
@@ -189,7 +187,14 @@ game.createScene('Death', {
         this.scoreText.center(this.stage);
         this.scoreText.addTo(this.stage);
         this.scoreText.position.x = game.width /2;
-        this.scoreText.position.y = 560;
+        this.scoreText.position.y = 490;
+
+        this.highScoreText = new game.Text('High Score: 0');
+        this.highScoreText.anchorCenter();    
+        this.highScoreText.center(this.stage);
+        this.highScoreText.addTo(this.stage);
+        this.highScoreText.position.x = game.width /2;
+        this.highScoreText.position.y = 560;
 
         this.deathSound = new game.Sound('Wasted.m4a');
         this.deathSound.loop = false;
@@ -345,7 +350,6 @@ game.createClass('Obstacle', {
         this.body.remove();
         game.scene.removeObject(this);
         if (!game.scene.player.dead) game.scene.addScore();
-
     },
 
     update: function () {
