@@ -9,7 +9,9 @@ game.config = {
         center: true,
         resize: false
     },
-
+    "storage": {
+        "id": "io.panda2.diamonddasher"
+    },
     mobile: {
     }
 };
