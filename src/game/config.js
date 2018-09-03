@@ -10,7 +10,7 @@ game.config = {
         resize: false
     },
     "storage": {
-        "id": "io.panda2.diamonddasher"
+        "id": "SP"
     },
     mobile: {
     }

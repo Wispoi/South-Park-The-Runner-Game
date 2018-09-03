@@ -23,7 +23,7 @@ game.addAsset('soundbutton.png');
 game.addAsset('btn_audiooff.png');
 game.addAsset('btn_audioon.png');
 game.addAsset('taco.m4a');
-game.addAsset('start.png');
+game.addAsset('press.png');
 
 game.createScene('Main', {
     score: 0,
@@ -141,11 +141,11 @@ game.createScene('Title', {
         logo.center(this.stage);
         logo.addTo(this.stage);
 
-        var buttonStart = new game.Button('start.png', function() {
+        var buttonStart = new game.Button('press.png', function() {
             game.system.setScene('Main');
         });
-        buttonStart.sprite.position.x = - 480 + game.width /2;
-        buttonStart.sprite.position.y = 300;
+        buttonStart.sprite.position.x = 400 + game.width /2;
+        buttonStart.sprite.position.y = 690;
         buttonStart.sprite.addTo(this.stage);   
 
 
@@ -220,6 +220,7 @@ game.createScene('Death', {
 });    
 
 game.createClass('Button', {
+    buttonModeCursor: "pointer",
     init: function(texture, callback) {
         this.callback = callback;
         this.sprite = new game.Sprite(texture);
