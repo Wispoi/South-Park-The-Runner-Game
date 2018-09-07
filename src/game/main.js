@@ -116,7 +116,9 @@ game.createScene('Main', {
     spawnBonus: function() {
         var bonus = new game.Bonus();
     },
-
+mousedown: function () {
+        this.player.jump();
+    },
     keydown: function (e) {
         ("W" === e || "UP" === e || "SPACE" === e) && this.player.jump()
     },
